@@ -1,3 +1,12 @@
+class PatternMatching:
+	def __init__(self, Text, Pattern, k, Genome):
+		self.Text = Text
+		self.Pattern = Pattern
+		self.k = k
+		self.Genome = Genome
+
+
+
 def PatternCount(Text, Pattern):
     count = 0
     for i in range(len(Text)-len(Pattern)+1):
@@ -6,7 +15,6 @@ def PatternCount(Text, Pattern):
     return count 
 
 def FrequencyMap(Text, k):
-    # your code here
     freq = {}
     n = len(Text)
     for i in range(n-k+1):
@@ -18,7 +26,6 @@ def FrequencyMap(Text, k):
     return freq
 
 def FrequentWords(Text, k):
-    # your code here
     word = []
     freq = FrequencyMap(Text,k)
     m = max(freq.values())
@@ -56,6 +63,7 @@ def PatternMatching(Pattern, Genome):
         if Genome[i:i+n] == Pattern:
             positions.append(i)        
     return positions
+
 
 
 
